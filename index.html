@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo de Fiscalização e Pagamento - Contrato de Refeições UFES</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos do Arquivo 1 (Timeline) */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #94d2bd;
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            width: 100%;
+            padding-left: 50%;
+            padding-right: 2rem;
+        }
+        .timeline-item:nth-child(odd) {
+            padding-left: 2rem;
+            padding-right: 50%;
+        }
+        .timeline-content {
+            position: relative;
+            width: 100%;
+        }
+        .timeline-item .timeline-dot {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 1.25rem;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            border: 4px solid #94d2bd;
+            background-color: #005f73;
+            border-radius: 50%;
+            z-index: 10;
+        }
+        .timeline-item .timeline-connector {
+            content: '';
+            position: absolute;
+            top: 1.25rem;
+            left: 50%;
+            width: 50%;
+            height: 2px;
+            background-color: #94d2bd;
+        }
+        .timeline-item:nth-child(even) .timeline-connector {
+            left: 0;
+        }
+        @media (max-width: 768px) {
+            .timeline-container::before {
+                left: 20px;
+                transform: translateX(0);
+            }
+            .timeline-item,
+            .timeline-item:nth-child(odd) {
+                padding-left: 60px;
+                padding-right: 1rem;
+            }
+            .timeline-item .timeline-dot {
+                left: 20px;
+                transform: translate(-50%, -50%);
+            }
+            .timeline-item .timeline-connector {
+                width: 40px;
+                left: 20px;
+            }
+        }
+
+        /* Estilos do Arquivo 2 (Lista) */
+        .lista-detalhada h1, .lista-detalhada h2, .lista-detalhada h3 { color: #2c3e50; }
+        .lista-detalhada section { margin-bottom: 40px; }
+        .lista-detalhada ul { margin-left: 20px; list-style-type: disc; }
+        .lista-detalhada .fase { 
+            background: #eef1f5; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin-top: 15px; 
+            border-left: 4px solid #0a9396;
+        }
+        .lista-detalhada .fase h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #005f73;
+        }
+         .lista-detalhada .fase li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-[#f0f4f8]">
+
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#005f73]">Fluxo de Medição e Pagamento</h1>
+            <p class="text-lg text-[#0a9396] mt-2">Contrato de Fornecimento de Refeições nos Restaurantes Universitários da Ufes</p>
+        </header>
+
+        <main class="relative">
+            
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold bg-[#0a9396] text-white inline-block px-6 py-2 rounded-full shadow-lg">Fase 1: Elaboração e Consolidação do IMR Setorial</h2>
+            </div>
+            
+            <div class="relative timeline-container">
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#ee9b00]"><span class="text-sm font-semibold text-[#ee9b00] bg-orange-100 px-2 py-1 rounded-md">Passo 1</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Avaliação Diária e Periódica</h3><p class="text-gray-600 mt-2">Fiscais e comissão realizam avaliações contínuas, preenchendo checklists e documentos auxiliares.</p></div></div>
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#ee9b00]"><span class="text-sm font-semibold text-[#ee9b00] bg-orange-100 px-2 py-1 rounded-md">Passo 2 & 3</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Registro e Visto de Ocorrências</h3><p class="text-gray-600 mt-2">Qualquer ocorrência é notificada ao Preposto, que deve atestar o recebimento com seu "visto".</p></div></div>
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#ca6702]"><span class="text-sm font-semibold text-[#ca6702] bg-orange-100 px-2 py-1 rounded-md">Passo 4</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Consolidação Quinzenal</h3><p class="text-gray-600 mt-2">A Comissão Interna analisa as avaliações e preenche o IMR para qualificar o desempenho em cada Campus.</p></div></div>
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#ca6702]"><span class="text-sm font-semibold text-[#ca6702] bg-orange-100 px-2 py-1 rounded-md">Passo 5 & 6</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Reunião e Assinatura do IMR</h3><p class="text-gray-600 mt-2">A equipe de fiscalização unifica as avaliações no IMR Consolidado e o envia para a ciência da empresa.</p></div></div>
+            </div>
+
+            <div class="text-center my-12"><h2 class="text-3xl font-bold bg-[#0a9396] text-white inline-block px-6 py-2 rounded-full shadow-lg">Fase 2: Elaboração do Faturamento</h2></div>
+            
+            <div class="relative timeline-container">
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#bb3e03]"><span class="text-sm font-semibold text-[#bb3e03] bg-red-100 px-2 py-1 rounded-md">Passo 7 & 8</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Recebimento de Relatórios e Provisório</h3><p class="text-gray-600 mt-2">A equipe confere relatórios de caixa e refeições, realizando o recebimento provisório dos serviços.</p></div></div>
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#bb3e03]"><span class="text-sm font-semibold text-[#bb3e03] bg-red-100 px-2 py-1 rounded-md">Passo 9 & 10</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Criação da Planilha de Medição</h3><p class="text-gray-600 mt-2">A fiscalização cria a planilha de medição, calculando o valor a pagar e aplicando todas as deduções (glosa, multas, etc).</p></div></div>
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#ae2012]"><span class="text-sm font-semibold text-[#ae2012] bg-red-100 px-2 py-1 rounded-md">Passo 11</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Assinatura da Medição</h3><p class="text-gray-600 mt-2">A planilha de medição é encaminhada para a assinatura da empresa contratada.</p></div></div>
+            </div>
+
+            <div class="text-center my-12"><h2 class="text-3xl font-bold bg-[#0a9396] text-white inline-block px-6 py-2 rounded-full shadow-lg">Fase 3: Formalização do Processo</h2></div>
+
+            <div class="relative timeline-container">
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#9b2226]"><span class="text-sm font-semibold text-[#9b2226] bg-red-100 px-2 py-1 rounded-md">Passo 12 a 14</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Autuação, GRU e Aceite</h3><p class="text-gray-600 mt-2">O processo é autuado, a GRU da taxa de ocupação é emitida e a Gestão do Contrato realiza o aceite definitivo.</p></div></div>
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#9b2226]"><span class="text-sm font-semibold text-[#9b2226] bg-red-100 px-2 py-1 rounded-md">Passo 15 & 16</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Nota Fiscal e Formalização</h3><p class="text-gray-600 mt-2">A empresa emite a Nota Fiscal, que é cadastrada e enviada à SOF para pagamento.</p></div></div>
+            </div>
+
+             <div class="text-center my-12"><h2 class="text-3xl font-bold bg-[#0a9396] text-white inline-block px-6 py-2 rounded-full shadow-lg">Fase 4: Pagamento</h2></div>
+             <div class="relative timeline-container">
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#9b2226]"><span class="text-sm font-semibold text-[#9b2226] bg-red-100 px-2 py-1 rounded-md">Passo 17 a 19</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Autorização, Empenho e Liquidação</h3><p class="text-gray-600 mt-2">O processo passa pela autorização da Proad, reforço de empenho, análise contábil e liquidação da despesa.</p></div></div>
+                <div class="timeline-item mb-12"><div class="timeline-dot"></div><div class="timeline-connector"></div><div class="timeline-content bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#9b2226]"><span class="text-sm font-semibold text-[#9b2226] bg-red-100 px-2 py-1 rounded-md">Passo 20</span><h3 class="text-xl font-bold text-[#005f73] mt-2">Pagamento Final</h3><p class="text-gray-600 mt-2">A ordem bancária é emitida para a conclusão do pagamento.</p></div></div>
+            </div>
+        </main>
+    </div>
+
+    <section class="lista-detalhada pb-12 md:pb-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                 <h2 class="text-3xl font-bold text-[#005f73] inline-block px-6 py-2">Visão Detalhada em Lista</h2>
+            </div>
+          
+            <div class="fase">
+                <h2>Fase 1: Elaboração e Consolidação do IMR Setorial</h2>
+                <ul>
+                    <li><strong>Avaliação Diária e Periódica:</strong> Fiscais e integrantes da Comissão de Qualidade realizam avaliações contínuas, preenchendo check-list e documentos auxiliares.</li>
+                    <li><strong>Registro de Ocorrências:</strong> Qualquer ocorrência deve ser imediatamente notificada ao Preposto da Contratada.</li>
+                    <li><strong>Visto da Notificação:</strong> O Preposto da Contratada atesta o recebimento da notificação com visto ou resposta por e-mail.</li>
+                    <li><strong>Consolidação das Avaliações:</strong> A cada quinzenal, a Comissão Interna consolida as avaliações diárias em formulário IMR por campus.</li>
+                    <li><strong>Reunião de Consolidação:</strong> A Equipe de Fiscalização consolida o IMR unificado.</li>
+                    <li><strong>Assinatura do IMR:</strong> O IMR Consolidado é assinado e encaminhado para a contratada.</li>
+                </ul>
+            </div>
+
+            <div class="fase">
+                <h2>Fase 2: Elaboração do Faturamento</h2>
+                <ul>
+                    <li><strong>Recebimento de Relatórios:</strong> Conferência de relatórios de caixa, refeições servidas e itens fornecidos.</li>
+                    <li><strong>Recebimento Provisório:</strong> Realizado pela Equipe de Gestão e Fiscalização.</li>
+                    <li><strong>Elaboração da Planilha de Medição:</strong> Calcula valor a pagar com base em refeições e serviços.</li>
+                    <li><strong>Deduções e Ajustes:</strong> Aplicadas deduções de créditos, glosas, multas e outros.</li>
+                    <li><strong>Assinatura da Medição:</strong> Planilha encaminhada à contratada.</li>
+                </ul>
+            </div>
+
+            <div class="fase">
+                <h2>Fase 3: Formalização do Processo de Pagamento e Outros Procedimentos</h2>
+                <ul>
+                    <li><strong>Autuação do Processo:</strong> Processo com documentos é autuado e enviado à gestão.</li>
+                    <li><strong>Outros Procedimentos (GRU):</strong> Emissão da GRU e acompanhamento do pagamento.</li>
+                    <li><strong>Aceite Definitivo:</strong> Gestão do contrato verifica serviços e formaliza aceite.</li>
+                    <li><strong>Emissão de Nota Fiscal/Fatura:</strong> Contratada emite NF/Fatura conforme fiscalização.</li>
+                    <li><strong>Formalização do Pagamento:</strong> Documentos encaminhados à SOF para liquidação e pagamento.</li>
+                </ul>
+            </div>
+
+            <div class="fase">
+                <h2>Fase 4: Pagamento</h2>
+                <ul>
+                    <li><strong>Autorização de Pagamento:</strong> SOF submete processo à Proad.</li>
+                    <li><strong>Empenho:</strong> Realização do reforço de empenho.</li>
+                    <li><strong>Análise Contábil:</strong> Liquidação da despesa e retenções de impostos.</li>
+                    <li><strong>Pagamento:</strong> Emissão de ordem bancária para concluir pagamento.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-8 bg-gray-200">
+        <p class="text-sm text-gray-600">&copy; 2024 Universidade Federal do Espírito Santo - Processo de Fiscalização de Contratos</p>
+    </footer>
+
+</body>
+</html>
